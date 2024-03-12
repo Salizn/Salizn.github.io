@@ -47,7 +47,7 @@ img {
 
 body {
     font-family: Book Antiqua;
-    background-image: linear-gradient(White, DarkSlateGrey);
+    background-color: Black;
 }
 
 h1 {
@@ -184,7 +184,7 @@ ul.topnav {
   box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
 }
 
-ul.topnav li {float: right;}
+ul.topnav li {float: center;}
 
 ul.topnav li a {
   display: block;
@@ -200,7 +200,7 @@ ul.topnav li a:hover:not(.active) {
     font-weight: bold;
 }
 
-ul.topnav li a.active {background-color: SteelBlue;}
+ul.topnav li a.active {background-color: Indigo;}
 
 ul.topnav li a.active:hover {font-weight: bold;}
 
