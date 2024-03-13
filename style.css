@@ -328,3 +328,14 @@ img.clickable {
 .clickable:hover {
   transform: translateY(-10px);
 }
+
+img.grid {
+    width:100%;
+    text-align: center;
+    border: 5px solid Indigo;
+}
+p.projects {
+    font-family: Book Antiqua;
+    background-color: black;
+    color: white;
+}
