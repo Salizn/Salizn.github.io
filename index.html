@@ -2,26 +2,99 @@
 <html>
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>            
-        <title>Home Page</title>
+        <title>Aria Strasser | Home</title>
         <link rel='stylesheet' href='style.css'>
     </head>
     <body>
         <ul class="topnav">
             
-            <li><a id="About Me" href="">About Me</a></li>
-            <li><a id="Projects and Experience" href="">Projects and Experience</a></li>
-            <li><a id="Home" class="active" href="">Home</a></li>
+            <li><a id="Resume" href="Resume.html">Resume</a></li>
+            <li><a id="Projects and Experience" href="Projects and Experience.html">Projects and Experience</a></li>
+            <li><a id="Home" class="active" href="index.html">Home</a></li>
             <p class="name">Aria Strasser</p>
         </ul>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
 
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Images and Captions -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="soulcatcher.png" style="width:100%">
+                <div class="text">Soulcatcher</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="Ruu color.png" style="width:100%">
+                <div class="text">Ruu Concept Art</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="SecretMeeples.png" style="width:100%">
+                <div class="text">SecretMeeples</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="VARScent.png" style="width:100%">
+                <div class="text">VARScent Cognitive Training Sim</div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- Dots -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <hr class="bigline" />
+
+        <!-- About Me -->
+        <div class="aboutme">
+            <h1>About Me</h1>
+            <br>
+            <img class="self" src="ariastrasser.png">
+            <br>
+            <p>Hello there! I'm Aria, a current student in the Games, Interactive Media, 
+            and Mobile Technology (GIMM) major at Boise State University. My focus in the 
+            program has been programming and audio, but I have also gained experience in 
+            3D modeling, animation, and concepting. I would characterize myself as a 
+            generalist who can adapt their skills to any situation. I am a quick learner, 
+            and I am always looking to improve or hone my skills. As a hobby, I enjoy drawing, 
+            playing the piano, and making funny video edits of playing games with my friends, 
+            or things that I’ve experienced in my programming. Feel free to explore my portfolio 
+            of projects or contact me with any questions!</p>
+        </div>
+
+        <hr class="bigline" />
+
+        <div class="aboutme">
+            <h1>Links</h1>
+        </div>
+
+        <div class="col-6">
+            <h2>Projects</h2>
+            <img class="clickable" src="Ruu color.png">
+        </div>
+        <div class="col-6">
+            <h2>Resume</h2>
+            <img class="clickable" src="soulcatcher.png">
+        </div>
 
         <footer class="footer">
             <h2 class="h2center">Contact Me</h2>
             <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-GitHub"></ion-icon>
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
                 <ion-icon name="logo-twitter"></ion-icon>
@@ -31,7 +104,38 @@
                 </a></li>
             </ul>
         </footer>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
     </body>
 </html>
