@@ -49,6 +49,7 @@ img.self {
 body {
     font-family: Book Antiqua;
     background-color: black;
+    margin: 0;
 }
 
 div.aboutme {
@@ -61,10 +62,16 @@ div.aboutme {
     font-family: arial;
 }
 
+div.links {
+    background-color: Black;    
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-block: 20px 40px;
+}
+
 h1 {
     text-align: center;
     font-size: 50px;
-    text-decoration: underline;
     color: white;
     padding: 11px 16px;
     margin: 0;
@@ -278,6 +285,7 @@ button {
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
+  padding-inline-start: 0px;
 }
 
 .social-icon__item,
@@ -344,7 +352,7 @@ img.grid {
 
 iframe.grid {
     width:100%;
-    height: 330px;
+    height: 325px;
     text-align: center;
     border: 5px solid Indigo;
 }
@@ -353,4 +361,52 @@ p.projects {
     font-family: Book Antiqua;
     background-color: black;
     color: white;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    cursor: pointer;
+    width:100%;
+    text-align: center;
+    border: 5px solid Indigo;
+}
+
+.gallery {
+    display: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    overflow: auto;
+}
+
+#modal-image {
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
 }
