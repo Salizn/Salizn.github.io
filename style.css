@@ -347,9 +347,9 @@ button {
 }
 
 p.resume {
-  color: White;
-  margin: 15px 0 10px 0;
-  font-size: 18px;
+  color: black;
+  margin: 15px 20px 10px 20px;
+  font-size: 1.1em;
   font-weight: 300;
   background-color: grey;
   text-align: center;
