@@ -14,6 +14,7 @@ const imageUrls = [
     'SlideScent4.png',
     'SlideScent5.png',
     'SlideScent6.png',
+    'SlideScent7.png',
 ];
 
 let currentIndex = 0;

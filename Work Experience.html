@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>            
-        <title>Aria Strasser | Resume</title>
+        <title>Aria Strasser | Work Experience</title>
         <link rel='stylesheet' href='style.css'>
     </head>
 <body>
@@ -17,17 +17,96 @@
 
     <div><h1>Work Experience<h1></div>
 
-    <div class="aboutme">
+    <div class="onBlack">
             <p>Over my time working at the Boise State eSports center, I worked on several different projects beyond just working in the production room,
             ranging from graphic design, to social media, to video edits. Here are a few of those that I am most proud of.</p>
     </div>
 
-    <div class="col-12" style="text-align: center;">
-            <h2>League Overlay</h2>
-            <br>
-            <p>I created the League of Legends overlay that Boise State eSports currently uses for their streams.
-            Created in Photoshop.</p>
+    <div class="col-12" style="text-align: center; background-color: grey; font-size:20px;">
+            <h2>League of Legends Overlay</h2>
+            <p>This is the current League of Legends overlay that Boise State eSports uses for their streams. This allows us to show teams, logos,
+            scores, cameras, and sponsors without taking away from the gameplay. Created in Photoshop.</p>
             <img src="League Overlay.png" style="width: 80%;">
+    </div>
+
+    <div class="col-3" style="text-align: center;">
+            <h2>Graphic Design</h2>
+            <br>
+            <p style="color: white; font-size: 20px;">These are some of the graphics I created for social media posts. The first was a graphic to 
+            introduce and celebrate new players who entered the program. The second was an invite I made for a Smash Bros tournament (characters and
+            character arts by Nintendo). The last one was a trading card that I created for each player that served as a fun surprise. All of these
+            were created in Photoshop.</p>
+    </div>
+    <div class="col-9" style="text-align: center;">
+            <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Images and Captions -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="NewPlayer.png" style="width:100%">
+                <div class="text">New Player Graphic</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="SmashBros.png" style="width:100%">
+                <div class="text">Smash Bros Tournament Announcement Graphic</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="Trading Card.png" style="width:100%">
+                <div class="text">Player Trading Card</div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- Dots -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <div class="col-12" style="text-align: center; background: #333; color: white; font-size: 20px;">
+            <h2>Social Media</h2>
+            <p>For a while, I was one of the main social media managers at Boise State eSports, posting graphics,
+            pictures, and event notices. Here is one of my favorite posts that I made.</p>
+            <img src="TwitterPost.png" style="width: 30%;">
+    </div>
+
+    <div class="col-12" style="text-align: center;">
+            <h2>Video Edits</h2>
+            <p style="color: white; font-size: 20px;">I created quite a few video edits for BSU eSports ranging from funny edits and videos, to more serious
+            highlight reels and recaps. I also work as a broadcast member, helping out with streams as either Replay Director or Spectator, and occationally
+            Technical Director or Caster</p>
+    </div>
+
+    <div class="col-4" style="text-align: center;">
+            <h3 style="color: white;">Playlist of Edits</h3>
+            <p style="color: white; font-size: 20px;">My edits that haven't been used yet or are in compilations</p>
+            <a id="Edits Playlist" href="https://www.youtube.com/playlist?list=PLOEt9EktGJ6TX2NT8Jy-A66y8lS7cnLuR">
+                <img class="channel" src="PlaylistEdits.png">
+            </a>
+    </div>
+    <div class="col-4" style="text-align: center;">
+            <h3 style="color: white;">Boise State Youtube</h3>
+            <p style="color: white; font-size: 20px;">I edit and post some of the shorts and recap videos here.</p>
+            <a id="BSU Youtube" href="https://www.youtube.com/@BoiseStateEsports">
+                <img class="channel" src="BSUYTLogo.png">
+            </a>
+    </div>
+    <div class="col-4" style="text-align: center;">
+            <h3 style="color: white;">Boise State Twitch</h3>
+            <p style="color: white; font-size: 20px;">Where most of our streams are held</p>
+            <a id="BSU Twitch" href="https://www.twitch.tv/boisestate">
+                <img class="channel" src="BSUTLogo.png">
+            </a>
     </div>
 
     <footer class="footer">
@@ -52,5 +131,33 @@
     </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 </body>
 </html>
