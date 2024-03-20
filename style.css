@@ -389,6 +389,13 @@ iframe.grid {
     border: 5px solid Indigo;
 }
 
+iframe.resume {
+    width:70%;
+    height: auto;
+    text-align: center;
+    border: 5px solid Indigo;
+}
+
 p.projects {
     font-family: Book Antiqua;
     background-color: black;
