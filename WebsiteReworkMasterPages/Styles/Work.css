@@ -1,0 +1,128 @@
+﻿#Banner nav a#WorkExperience {
+    background-color: var(--hoverColor);
+}
+
+#PageContent1 {
+    background-color: var(--secondaryColor);
+}
+
+.subtitle {
+    font-weight: 350;
+    font-size: 4rem;
+    line-height: 1;
+    padding: 11px 16px;
+    margin: 0;
+    font-family: Luminari;
+}
+
+.intro {
+    width: 75%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.slideshow-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    background-color: var(--primaryColor);
+    border: 3px solid var(--backgroundColor);
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.graphics-item {
+    
+    color: var(--textColor);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.graphics-title {
+    text-align: center;
+    color: var(--highlightedColor);
+    font-family: 'Book Antiqua', serif;
+    margin-bottom: 5px;
+    background-color: var(--backgroundColor);
+    border-radius: 25px;
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+#graphics-text {
+    font-size: 1.8rem;
+}
+
+.graphics-title,
+#graphics-text {
+    transition: opacity 0.6s ease;
+}
+
+.channel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.channel-item {
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    border: 3px solid var(--backgroundColor);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.channel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--hoverColor);
+    border-color: var(--hoverColor);
+}
+
+.channel-item h2 {
+    text-align: center;
+    color: var(--highlightedColor);
+    font-family: 'Book Antiqua', serif;
+    margin-bottom: 5px;
+    background-color: var(--backgroundColor);
+    border-radius: 25px;
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.channel-item p {
+    font-family: 'Book Antiqua', serif;
+    background-color: var(--backgroundColor);
+    color: var(--tertiaryColor);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    line-height: 1.4em;
+}
+
+.channel {
+    border-radius: 9999px;
+    margin: auto;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+@media (max-width: 800px) {
+    .channel-grid {
+        grid-template-columns: 1fr;
+    }
+    .slideshow-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

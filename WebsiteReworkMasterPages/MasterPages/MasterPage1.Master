@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage1.master.cs" Inherits="WebsiteReworkMasterPages.MasterPages.MasterPage1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Aria Strasser</title>
+    <link href="../Styles/Reset.css" rel="stylesheet" />
+    <link href="../Styles/Main.css" rel="stylesheet" />
+    <script src="../Scripts/slideshow.js"></script>
+    <script src="../Scripts/gallery.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="WebPage">
+            <header id="SiteBanner">
+                <img src="../Images/Youtube Banner.png" alt="Banner" />
+            </header>
+            <header id="Banner">
+                <nav>
+                    <h1>Aria Strasser</h1>
+                    <ul id="topnav">
+                        <li><a id="Home" href="Home.aspx">Home</a></li>
+                        <li><a id="ProjectsExperience" href="ProjectsExperience.aspx">Projects and Experience</a></li>
+                        <li><a id="WorkExperience" href="WorkExperience.aspx">Work Experience</a></li>
+                        <li><a id="Resume" href="Resume.aspx">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="nav-spacer" aria-hidden="true"></div>
+
+            <div id="Wrapper">
+                <!-- <aside id="Links">
+                    <h2>Side Links</h2>
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                    </ul>
+                </aside> -->
+                <section id="PageContent1">
+
+                    <asp:ContentPlaceHolder ID="Content1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </section>
+
+                <section id="PageContent2">
+
+                    <asp:ContentPlaceHolder ID="Content2" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </section>
+
+                <section id="PageContent3">
+
+                    <asp:ContentPlaceHolder ID="Content3" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </section>
+            </div>
+
+            <footer id="Footer">
+                <h2>Contact Me</h2>
+                <ul class="social-icon">
+                <li class="social-icon_item"><a class="social-icon_link" href="https://github.com/Salizn" target="_blank">
+                    <ion-icon name="logo-GitHub"></ion-icon>
+                    </a></li>
+                <li class="social-icon_item"><a class="social-icon_link" href="https://twitter.com/Salizan14" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+                <li class="social-icon_item"><a class="social-icon_link" href="https://www.linkedin.com/in/aria-strasser-2434a72b9/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                <li class="social-icon_item"><a class="social-icon_link" href="https://www.youtube.com/playlist?list=PLOEt9EktGJ6R2Q9a2Sy8TA5bvmZJS-8R4" target="_blank">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    </a></li>
+                <li class="social-icon_item"><a class="social-icon_link" href="mailto:songofjoye@gmail.com">
+                    <img src="../Images/email.png" alt="email" style="height: 0.9em; width: auto;">
+                    </a></li>
+                </ul>
+                <p>&copy; Aria Strasser 2026</p>
+            </footer>
+        </div>
+    </form>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        (function () {
+            const banner = document.getElementById('Banner');
+            const nav = banner.querySelector('nav');
+            const spacer = document.getElementById('nav-spacer');
+
+            function updateSpacer() {
+                spacer.style.height = nav.offsetHeight + 'px';
+            }
+
+            function onScroll() {
+                const stickPoint = banner.offsetTop; // where nav sits naturally
+                const shouldFix = window.scrollY > stickPoint;
+                nav.classList.toggle('is-fixed', shouldFix);
+                spacer.classList.toggle('show', shouldFix);
+            }
+
+            window.addEventListener('resize', updateSpacer);
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            updateSpacer();
+            onScroll();
+        })();
+    </script>
+</body>
+</html>

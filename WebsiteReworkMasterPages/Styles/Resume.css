@@ -1,0 +1,180 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+#PageContent1 {
+    display: none;
+}
+
+#PageContent3 {
+    display: none;
+}
+
+#Banner nav a#Resume {
+    background-color: var(--hoverColor);
+}
+
+li {
+    font-size: 1.5rem;
+    max-width: 70%;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+hr {
+    width: 60%;
+    margin: 2.5rem auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient( to right, transparent, var(--primaryColor), transparent );
+}
+
+.resume-section li {
+    margin: auto;
+}
+
+.resume-section {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-text {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--primaryColor);
+}
+
+p.resume-text {
+    margin-bottom: 1rem;
+    color: var(--primaryColor);
+    opacity: 0.9;
+}
+
+h2.resume-text {
+    font-size: 2.5rem;
+}
+
+h4.resume-text {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.abilities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#Programs,
+#Languages {
+    padding: 1.5rem;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+#Programs h3,
+#Programs h4,
+#Programs p:first-of-type,
+#Languages h4,
+#Languages p:first-of-type {
+    grid-column: 1 / -1;
+}
+
+#Programs p, #Languages p {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+#Programs li, #Languages li {
+    font-size: 1.5rem;
+}
+
+#Programs h4, #Languages h4 {
+    margin-bottom: 1.5rem;
+}
+
+#ResumePaper {
+    width: 75%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.2);
+}
+
+#PageContent ul {
+    list-style-type: circle;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#PageContent p {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#ResumeTitle {
+    float: left;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#ContactInfo {
+    float: right;
+    text-align: right;
+    margin-bottom: 30px;
+    font-family: "Space Grotesk", serif;
+}
+
+#ContactInfo p {
+    font-size: 1.2rem;
+}
+
+#ContactInfo p a {
+    font-size: 1.2rem;
+}
+
+#intent {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
+
+.SectionHeader {
+    display: block;
+    width: 100%;
+    background-color: var(--hoverColor);
+    margin: 2rem 1rem 0rem 0rem;
+    clear: both;
+    text-align: left;
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--primaryColor);
+    text-align: center;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    padding: 3px;
+}
+
+.skills {
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+}
